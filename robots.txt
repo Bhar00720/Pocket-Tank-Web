@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tanks.game.corelumetech.in/sitemap.xml
+
+# Disallow any sensitive paths
+Disallow: /node_modules/
+Disallow: /.git/

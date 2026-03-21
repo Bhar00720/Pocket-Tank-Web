@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pocket Tanks Classic Clone</title>
+
+    <!-- ═══════════════════════════════════════════════
+         SEO — Primary Meta Tags
+    ═══════════════════════════════════════════════ -->
+    <title>War Tanks – Free Online Tank Battle Game | 2 Player Artillery War</title>
+    <meta name="description" content="War Tanks is a free browser-based 2-player tank battle game. Choose your weapon, set your angle and power, and destroy the enemy tank across epic terrain. No download required – play instantly online!">
+    <meta name="keywords" content="war tanks, tank game online, free tank game, 2 player tank game, browser tank game, tank battle, artillery game, tank war game, online war game, tank shooting game, multiplayer tank game, free online tank game, tank combat, cannon game, tank simulator, war game online, pocket tanks, tank trouble, tank stars, diep.io alternative, free browser war game, tank battle online, tank pvp game, best tank game 2024, play tank game for free, war game browser, action game online, strategy tank game, epic tank battle, shoot tanks online">
+    <meta name="author" content="War Tanks">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#0d1117">
+    <meta name="referrer" content="origin-when-cross-origin">
+
+    <!-- ═══════════════════════════════════════════════
+         SEO — Canonical URL
+    ═══════════════════════════════════════════════ -->
+    <link rel="canonical" href="https://tanks.game.corelumetech.in/">
+
+    <!-- ═══════════════════════════════════════════════
+         SEO — Open Graph (Facebook / Discord / WhatsApp)
+    ═══════════════════════════════════════════════ -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tanks.game.corelumetech.in/">
+    <meta property="og:title" content="War Tanks – Free Online 2-Player Tank Battle Game">
+    <meta property="og:description" content="Engage in epic tank warfare right in your browser! Choose weapons, set angles, and blast your opponent into oblivion. Free to play, no download needed.">
+    <meta property="og:image" content="https://tanks.game.corelumetech.in/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="War Tanks">
+    <meta property="og:locale" content="en_US">
+
+    <!-- ═══════════════════════════════════════════════
+         SEO — Twitter / X Card
+    ═══════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="War Tanks – Free Online Tank Battle Game">
+    <meta name="twitter:description" content="The best free browser tank battle game! 2-player artillery warfare, multiple weapons & biomes. Play now, no download needed.">
+    <meta name="twitter:image" content="https://tanks.game.corelumetech.in/og-image.png">
+
+    <!-- ═══════════════════════════════════════════════
+         SEO — JSON-LD Structured Data (VideoGame schema)
+    ═══════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "War Tanks",
+      "description": "War Tanks is a free browser-based 2-player artillery tank battle game. Pick your weapons, adjust angle and power, and destroy the enemy across varied terrain and weather conditions. No download required.",
+      "url": "https://tanks.game.corelumetech.in/",
+      "image": "https://tanks.game.corelumetech.in/og-image.png",
+      "genre": ["Action", "Strategy", "Artillery", "War Game", "2 Player Game"],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "numberOfPlayers": {
+        "@type": "QuantitativeValue",
+        "minValue": 1,
+        "maxValue": 2
+      },
+      "keywords": "war tanks, tank game, 2 player tank game, free browser tank game, artillery game, tank battle, online tank game",
+      "inLanguage": "en",
+      "isFamilyFriendly": true
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         Cache headers & AdSense
+    ═══════════════════════════════════════════════ -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="ad-enabled" content="true">
+
     <link rel="stylesheet" href="css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4265727209161072"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="game-container">
         <!-- V7.0 Atmospheric Wallpaper Overlay -->
@@ -16,8 +97,10 @@
 
         <!-- Classic Main Menu -->
         <div id="main-menu" class="retro-panel active">
-            <h1 style="color:var(--accent); font-size:2.5rem; text-transform:uppercase; letter-spacing:4px; text-shadow: 0 0 15px var(--accent); margin-bottom: 25px;">Pocket Tanks Web</h1>
-            
+            <h1
+                style="color:var(--accent); font-size:2.5rem; text-transform:uppercase; letter-spacing:4px; text-shadow: 0 0 15px var(--accent); margin-bottom: 25px;">
+                War Tanks</h1>
+
             <div class="lobby-grid">
                 <div class="setup-section">
                     <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -40,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="setup-section" style="max-width: 600px; margin: 0 auto 20px auto;">
                 <div class="setup-group" style="justify-content: center; gap: 30px;">
                     <div>
@@ -63,7 +146,8 @@
             </div>
 
             <button id="btn-start" class="retro-btn huge-btn">START BATTLE</button>
-            <button id="btn-resume" class="retro-btn huge-btn hidden" style="margin-left: 15px; background: #64748b; border-color: #64748b;">RESUME</button>
+            <button id="btn-resume" class="retro-btn huge-btn hidden"
+                style="margin-left: 15px; background: #64748b; border-color: #64748b;">RESUME</button>
         </div>
 
         <!-- Classic Game HUD -->
@@ -90,7 +174,7 @@
             <!-- Bottom Console -->
             <div id="bottom-console">
                 <div id="p1-turn-indicator" class="turn-indicator hidden">PLAYER 1 TURN</div>
-                
+
                 <div class="hud-panel">
                     <label>ANGLE</label>
                     <div class="stepper-row">
@@ -108,7 +192,7 @@
                         <button id="btn-power-up" class="retro-btn sq-btn">+</button>
                     </div>
                 </div>
-                
+
                 <div class="hud-panel center-panel" style="flex-direction: row; gap: 10px; align-items: stretch;">
                     <select id="weapon-select" class="retro-select" style="flex: 1;"></select>
                     <button id="btn-fire" class="round-icon-btn" title="Fire">
@@ -133,28 +217,65 @@
 
                 <div id="p2-turn-indicator" class="turn-indicator hidden">PLAYER 2 TURN</div>
             </div>
-            </div>
         </div>
+    </div>
 
-        <!-- End Screen -->
-        <div id="end-screen" class="retro-panel hidden">
-            <h2 id="winner-text" style="font-size:3rem; margin-bottom:20px; color:#fff;">PLAYER WINS</h2>
+    <!-- End Screen -->
+    <div id="end-screen" class="retro-panel hidden">
+        <h2 id="winner-text" style="font-size:3rem; margin-bottom:20px; color:#fff;">PLAYER WINS</h2>
+        <div style="display:flex; gap:10px; justify-content:center;">
+            <button id="btn-rematch" class="retro-btn">REMATCH</button>
+            <button id="btn-menu" class="retro-btn">MAIN MENU</button>
+        </div>
+    </div>
+
+    <!-- Settings/Menu Modal -->
+    <div id="settings-modal" class="modal-overlay hidden">
+        <div class="retro-panel" style="width: 350px;">
+            <h3 style="margin-bottom:20px;">GAME MENU</h3>
+
+            <div class="setup-section" style="text-align:left;">
+                <h4 class="setup-title" style="font-size:1rem; margin-bottom:10px;">SOUND</h4>
+                <div class="setup-group">
+                    <label>Volume</label>
+                    <input type="range" id="volume-slider" min="0" max="100" value="80"
+                        style="flex:1; accent-color: var(--accent);">
+                </div>
+                <div class="setup-group">
+                    <label>Mute</label>
+                    <button id="btn-mute" class="retro-btn" style="padding:6px 16px; font-size:0.85rem;">🔊 ON</button>
+                </div>
+            </div>
+
+            <button id="btn-abort-match" class="retro-btn" style="width:100%; margin-bottom:10px; background:#c00;">QUIT
+                TO MENU</button>
+            <button id="modal-settings-close" class="retro-btn" style="width:100%;">RESUME BATTLE</button>
+        </div>
+    </div>
+
+    <!-- Custom Game Dialog (replaces native alert) -->
+    <div id="game-dialog" class="modal-overlay hidden">
+        <div class="retro-panel" style="width: 400px; max-width: 90%;">
+            <h3 id="game-dialog-title" style="margin-bottom:15px; color: var(--accent);">NOTICE</h3>
+            <p id="game-dialog-message" style="margin-bottom:20px; color: var(--text-dim); font-size: 0.95rem;"></p>
+            <button id="game-dialog-ok" class="retro-btn" style="width:100%;">OK</button>
+        </div>
+    </div>
+    <!-- Custom Game Confirm Dialog -->
+    <div id="game-confirm" class="modal-overlay hidden">
+        <div class="retro-panel" style="width: 400px; max-width: 90%;">
+            <h3 id="game-confirm-title" style="margin-bottom:15px; color: var(--danger);">CONFIRM</h3>
+            <p id="game-confirm-message" style="margin-bottom:20px; color: var(--text-dim); font-size: 0.95rem;"></p>
             <div style="display:flex; gap:10px; justify-content:center;">
-                <button id="btn-rematch" class="retro-btn">REMATCH</button>
-                <button id="btn-menu" class="retro-btn">MAIN MENU</button>
+                <button id="game-confirm-yes" class="retro-btn" style="background: var(--danger); flex:1;">YES,
+                    LEAVE</button>
+                <button id="game-confirm-no" class="retro-btn" style="flex:1;">CANCEL</button>
             </div>
         </div>
-
-        <!-- Settings/Menu Modal -->
-        <div id="settings-modal" class="modal-overlay hidden">
-            <div class="retro-panel" style="width: 300px;">
-                <h3 style="margin-bottom:20px;">GAME MENU</h3>
-                <button id="btn-abort-match" class="retro-btn" style="width:100%; margin-bottom:10px; background:#c00;">QUIT TO MENU</button>
-                <button id="modal-settings-close" class="retro-btn" style="width:100%;">RESUME BATTLE</button>
-            </div>
-        </div>
+    </div>
     </div>
 
     <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

@@ -60,6 +60,8 @@ export function startLocalGame(config, savedState) {
             t.shieldLife = p.shieldLife || 0;
             return t;
         });
+        // Snap tanks to terrain surface so they don't spawn buried inside the ground
+        players.forEach(p => p.dropToTerrain(terrain));
         currentPlayerIndex = savedState.currentPlayerIndex;
         gameState = savedState.gameState;
     } else {
@@ -158,6 +160,25 @@ export function startLocalGame(config, savedState) {
     settingsClose.parentNode.replaceChild(newSettingsClose, settingsClose);
     newSettingsClose.addEventListener('click', () => {
         settingsModal.classList.add('hidden');
+    });
+
+    // Sound Settings
+    const volSlider = document.getElementById('volume-slider');
+    const btnMute = document.getElementById('btn-mute');
+    // Restore saved volume
+    const savedVol = localStorage.getItem('pt_volume');
+    const savedMute = localStorage.getItem('pt_muted');
+    if (savedVol !== null) volSlider.value = Math.round(parseFloat(savedVol) * 100);
+    if (savedMute === 'true') btnMute.innerText = '🔇 OFF';
+
+    volSlider.addEventListener('input', () => {
+        const val = parseInt(volSlider.value) / 100;
+        audio.setVolume(val);
+        if (audio.muted) { audio.muted = false; localStorage.setItem('pt_muted', false); btnMute.innerText = '🔊 ON'; }
+    });
+    btnMute.addEventListener('click', () => {
+        const muted = audio.toggleMute();
+        btnMute.innerText = muted ? '🔇 OFF' : '🔊 ON';
     });
 
     const btnAbort = document.getElementById('btn-abort-match');

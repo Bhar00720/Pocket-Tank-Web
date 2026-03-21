@@ -1,6 +1,31 @@
 export class AudioManager {
     constructor() {
         this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        this.masterGain = this.audioCtx.createGain();
+        this.masterGain.connect(this.audioCtx.destination);
+        this.muted = false;
+        // Restore saved settings
+        const savedVol = localStorage.getItem('pt_volume');
+        const savedMute = localStorage.getItem('pt_muted');
+        if (savedVol !== null) this.masterGain.gain.value = parseFloat(savedVol);
+        if (savedMute === 'true') { this.muted = true; this.masterGain.gain.value = 0; }
+    }
+
+    setVolume(val) {
+        this.masterGain.gain.value = val;
+        localStorage.setItem('pt_volume', val);
+    }
+
+    toggleMute() {
+        this.muted = !this.muted;
+        if (this.muted) {
+            this.masterGain.gain.value = 0;
+        } else {
+            const saved = localStorage.getItem('pt_volume');
+            this.masterGain.gain.value = saved !== null ? parseFloat(saved) : 1;
+        }
+        localStorage.setItem('pt_muted', this.muted);
+        return this.muted;
     }
 
     playWeaponSynth(category) {
@@ -67,7 +92,7 @@ export class AudioManager {
         gain.gain.exponentialRampToValueAtTime(0.001, this.audioCtx.currentTime + duration);
 
         osc.connect(gain);
-        gain.connect(this.audioCtx.destination);
+        gain.connect(this.masterGain);
         osc.start();
         osc.stop(this.audioCtx.currentTime + duration);
     }
