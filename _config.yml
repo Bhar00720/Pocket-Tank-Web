@@ -1,0 +1,20 @@
+# GitHub Pages Configuration for War Tanks
+url: "https://tanks.game.corelumetech.in"
+baseurl: ""
+
+# Include these files (GitHub Pages/Jekyll ignores them by default)
+include:
+  - sitemap.xml
+  - robots.txt
+  - CNAME
+  - favicon.png
+  - og-image.png
+
+# Exclude dev files from deployment
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - .gitignore
+  - docs
